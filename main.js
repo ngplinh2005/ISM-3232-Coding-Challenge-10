@@ -9,4 +9,14 @@ const purchaseButton = document.getElementById("purchase-button")
 sizeSelector.addEventListener("change", function(event) {
     const selectedPrice = event.target.value
     priceElement.textContent = `$${selectedPrice}`
+
+    // Task 3: Handle Stock Availability
+    if (Number(stock) === 0) {
+        purchaseButton.disabled = true
+        purchaseButton.textContent = "Out of Stock"
+    } 
+    else {
+        purchaseButton.disabled = false
+        purchaseButton.textContent = "Purchase"
+    }
 })
