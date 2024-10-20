@@ -20,3 +20,13 @@ sizeSelector.addEventListener("change", function(event) {
         purchaseButton.textContent = "Purchase"
     }
 })
+
+// Task 4: Create a Checkout Event
+purchaseButton.addEventListener("click", function(event) {
+if(!purchaseButton.disabled) {
+    alert("You purchased successfully!")
+}
+else {
+    alert("Out of stock. Product cannot be purchased.")
+}
+})
